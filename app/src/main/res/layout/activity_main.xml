@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <fragment
+        android:id="@+id/fragmentmaxcustomers"
+        android:name="jp.cafe_boscobel.ushio.zaizen.dailypreparation3.MaxCustomersFragment"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="20dp"/>
+
+
+<!--    <fragment-->
+<!--        android:id="@+id/fragmenteggnumber"-->
+<!--        android:name="jp.cafe_boscobel.ushio.zaizen.dailypreparation3.EggNumberFragment"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/fragmentmaxcustomers"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="50dp"/>-->
+<!---->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/fragmentmaxcustomers"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="horizontal">
+
+        <fragment
+            android:id="@+id/fragmentlist1"
+            android:name="jp.cafe_boscobel.ushio.zaizen.dailypreparation3.List1Fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <fragment
+            android:id="@+id/fragmentlist2"
+            android:name="jp.cafe_boscobel.ushio.zaizen.dailypreparation3.List2Fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+</LinearLayout>
+
+
