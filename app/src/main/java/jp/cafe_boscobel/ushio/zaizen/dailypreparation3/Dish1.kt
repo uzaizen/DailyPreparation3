@@ -1,9 +1,9 @@
 package jp.cafe_boscobel.ushio.zaizen.dailypreparation3
 
 data class Dish1 (
-        val Name: String,
-        val Required: Int,
-        val Stock: Int,
-        val Cook: Int,
-        val Total: Int
+        var Name: String,
+        var Required: Int,
+        var Stock: Int,
+        var Cook: Int,
+        var Total: Int
         )

@@ -11,12 +11,10 @@ import android.view.inputmethod.InputMethodManager
 import kotlinx.android.synthetic.main.fragment_max_customers.*
 import kotlinx.android.synthetic.main.fragment_max_customers.view.*
 
-
 class MaxCustomersFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Log.d("uztest", "MaxCustomerFragment has started")
     }
 
     override fun onCreateView(
@@ -33,9 +31,11 @@ class MaxCustomersFragment : Fragment() {
     private inner class maxcustomernumberset : View.OnClickListener {
         override fun onClick(view: View) {
             if (maxcustomers.text == null) {
+                MAXCUSTOMER=0
                 Log.d("uztest", "it is null")
             } else {
                 MAXCUSTOMER = maxcustomers.text.toString().toInt()
+                CulcRequired(MAXCUSTOMER)
                 Log.d("uztest", "data is ${MAXCUSTOMER}")
             }
             /*キーボードを消す*/
@@ -43,5 +43,18 @@ class MaxCustomersFragment : Fragment() {
             inputManager.hideSoftInputFromWindow(view.windowToken, InputMethodManager.HIDE_NOT_ALWAYS)
         }
         }
+
+    fun CulcRequired (MaxCustomer:Int){
+        Soup.Required = MaxCustomer * 120
+        PotatoSalad.Required = MaxCustomer * 40
+        CarrotRapee.Required = MaxCustomer * 20
+        Rice.Required = MaxCustomer / 3 + 1
+        Hamberg.Required = MaxCustomer / 4 + 1
+        Locomoko.Required = MaxCustomer / 6 + 1
+        Sarmon.Required = MaxCustomer / 5
+        Chiken.Required = MaxCustomer / 5
+        RoastBeef.Required = MaxCustomer / 5
+    }
+
     }
 

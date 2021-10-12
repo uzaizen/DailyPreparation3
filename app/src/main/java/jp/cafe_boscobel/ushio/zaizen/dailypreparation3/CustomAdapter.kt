@@ -14,7 +14,7 @@ class CustomAdapter(context: Context?, var mDish1List: List<Dish1>) : ArrayAdapt
     private val layoutInflater = context?.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
-        // Animalの取得
+        // dish1の取得
         val dish1 = mDish1List[position]
 
         // レイアウトの設定
