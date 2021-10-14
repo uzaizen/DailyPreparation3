@@ -104,15 +104,12 @@ class NumUpdateActivity : AppCompatActivity() {
                     return
                 }
                 updatestock = p0.toString().toInt()
-                Log.d("uztest", "Stock is ${updatestock}")
                 if (stockswitch == 0) {
-                    Log.d("uztest", "switch = 0")
                     updatecook = updaterequired - updatestock
                     updatetotal = updatestock + updatecook
                     recul()
                 } else
                     if (stockswitch == 1) {
-                        Log.d("uztest", "switch=1")
                         updatetotal = updatestock + updatecook
                         recul()
                     }
@@ -138,12 +135,10 @@ class NumUpdateActivity : AppCompatActivity() {
                 }
                 stockswitch = 1
                 updatecook = p0.toString().toInt()
-                Log.d("uztest", "cook is ${updatecook}")
                 if (updatecook < 10000) {
                     updatetotal = updatestock + updatecook
                     recul()
-                } else
-                    Log.d("uztest", "editcook")
+                } else {}
             }
 
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {

@@ -32,11 +32,9 @@ class MaxCustomersFragment : Fragment() {
         override fun onClick(view: View) {
             if (maxcustomers.text == null) {
                 MAXCUSTOMER=0
-                Log.d("uztest", "it is null")
             } else {
                 MAXCUSTOMER = maxcustomers.text.toString().toInt()
                 CulcRequired(MAXCUSTOMER)
-                Log.d("uztest", "data is ${MAXCUSTOMER}")
             }
             /*キーボードを消す*/
             val inputManager = activity?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager

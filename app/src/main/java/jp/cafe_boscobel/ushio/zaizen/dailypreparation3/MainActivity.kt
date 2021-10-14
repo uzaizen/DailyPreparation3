@@ -5,15 +5,15 @@ import android.os.Bundle
 import kotlinx.android.synthetic.main.*
 
 var MAXCUSTOMER : Int = 0
-var Soup = Dish1("スープ", 0, 0, 0, 0)
-var PotatoSalad = Dish1("ポテサラ", 0, 0, 0, 0)
-var CarrotRapee = Dish1("人参ラぺ", 0, 0, 0, 0)
-var Rice = Dish1("ライス", 0, 0, 0, 0)
-var Hamberg = Dish1("ハンバーグ", 0, 0, 0, 0)
-var Locomoko = Dish1("ロコモコ", 0, 0, 0, 0)
-var Sarmon = Dish1("サーモン燻製", 0, 0, 0, 0)
-var Chiken = Dish1("チキングリル", 0, 0, 0, 0)
-var RoastBeef = Dish1("ローストビーフ", 0, 0, 0, 0)
+var Soup = Dish1("スープ　　　　　", 0, 0, 0, 0)
+var PotatoSalad = Dish1("ポテサラ　　　　", 0, 0, 0, 0)
+var CarrotRapee = Dish1("人参ラぺ　　　　", 0, 0, 0, 0)
+var Rice = Dish1("ライス　　　　　", 0, 0, 0, 0)
+var Hamberg = Dish1("ハンバーグ　　　", 0, 0, 0, 0)
+var Locomoko = Dish1("ロコモコ　　　　", 0, 0, 0, 0)
+var Sarmon = Dish1("サーモン燻製　　", 0, 0, 0, 0)
+var Chiken = Dish1("チキングリル　　", 0, 0, 0, 0)
+var RoastBeef = Dish1("ローストビーフ　", 0, 0, 0, 0)
 
 var Mayonnaise = Seasoning1("マヨネーズ", 0)
 var Tartar = Seasoning1("タルタル",0)

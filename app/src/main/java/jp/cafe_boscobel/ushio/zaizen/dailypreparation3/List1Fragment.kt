@@ -9,8 +9,6 @@ import android.view.ViewGroup
 import android.widget.*
 import androidx.fragment.app.Fragment
 
-
-
 class List1Fragment : Fragment() {
 
     lateinit var mDish1List: ArrayList<Dish1>
@@ -20,7 +18,6 @@ class List1Fragment : Fragment() {
             savedInstanceState: Bundle?
     ): View? {
 
-        Log.d("uztest","onCreateView")
         val view = inflater.inflate(R.layout.fragment_list1, container, false)
 
         mDish1List = arrayListOf(Soup, PotatoSalad, CarrotRapee, Rice, Hamberg, Locomoko, Sarmon, Chiken, RoastBeef)
@@ -57,7 +54,7 @@ class List1Fragment : Fragment() {
             intent2NumInput.putExtra("Cook", UpdateCook)
             intent2NumInput.putExtra("Total",UpdateTotal)
 
-            val requestCode:Int = 9999
+//            val requestCode:Int = 9999
 //            startActivityForResult(intent2NumInput, requestCode)
 
             startActivity(intent2NumInput)
@@ -81,10 +78,9 @@ class List1Fragment : Fragment() {
 
         list1View?.adapter = adapter
 
-
-        Log.d("uztest","onStart")
     }
 
+    /*
     override fun onResume() {
         super.onResume()
         Log.d("uztest", "onResume")
@@ -109,5 +105,5 @@ class List1Fragment : Fragment() {
         super.onDestroy()
         Log.d("uztest","onDestroy")
     }
-
+*/
 }

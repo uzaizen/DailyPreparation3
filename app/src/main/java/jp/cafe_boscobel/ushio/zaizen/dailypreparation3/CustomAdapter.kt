@@ -1,6 +1,8 @@
 package jp.cafe_boscobel.ushio.zaizen.dailypreparation3
 
 import android.content.Context
+import android.text.TextUtils.replace
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -28,16 +30,31 @@ class CustomAdapter(context: Context?, var mDish1List: List<Dish1>) : ArrayAdapt
         menuName?.text = dish1.Name
 
         val required = view?.findViewById<TextView>(R.id.rwRequired)
-        required?.text = dish1.Required.toString()
+        if (dish1.Required > 999) {required?.text = "%,12d".format(dish1.Required)}
+        else if (dish1.Required > 99) {required?.text = " "+"%,12d".format(dish1.Required)}
+            else if (dish1.Required > 9) {required?.text = "  "+"%,12d".format(dish1.Required)}
+                else {required?.text = "   "+"%,12d".format(dish1.Required)}
+
 
         val stock = view?.findViewById<TextView>(R.id.rwStock)
-        stock?.text = dish1.Stock.toString()
+        if (dish1.Stock > 999) {stock?.text = "%,12d".format(dish1.Stock)}
+        else if (dish1.Stock > 99) {stock?.text = " "+"%,12d".format(dish1.Stock)}
+            else if (dish1.Stock > 9) {stock?.text = "  "+"%,12d".format(dish1.Stock)}
+                else {stock?.text = "   "+"%,12d".format(dish1.Stock)}
+
 
         val cook = view?.findViewById<TextView>(R.id.rwToday)
-        cook?.text = dish1.Cook.toString()
+        if (dish1.Cook > 999) {cook?.text = "%,12d".format(dish1.Cook)}
+        else if (dish1.Cook > 99) {cook?.text = " "+"%,12d".format(dish1.Cook)}
+        else if (dish1.Cook > 9) {cook?.text = "  "+"%,12d".format(dish1.Cook)}
+        else {cook?.text = "   "+"%,12d".format(dish1.Cook)}
 
         val total = view?.findViewById<TextView>(R.id.rwTotal)
-        total?.text = dish1.Total.toString()
+        total?.text = "%,12d".format(dish1.Total)
+        if (dish1.Total > 999) {total?.text = "%,12d".format(dish1.Total)}
+        else if (dish1.Total > 99) {total?.text = " "+"%,12d".format(dish1.Total)}
+        else if (dish1.Total > 9) {cook?.text = "  "+"%,12d".format(dish1.Total)}
+        else {total?.text = "   "+"%,12d".format(dish1.Total)}
 
         return view!!
     }
