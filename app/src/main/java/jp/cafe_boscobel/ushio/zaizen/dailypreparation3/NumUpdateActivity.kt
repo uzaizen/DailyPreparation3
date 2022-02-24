@@ -21,6 +21,7 @@ class NumUpdateActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_num_update)
 
+        /* EditTextを入力できないようにする */
         EditRequired.setFocusable(false)
         EditTotal.setFocusable(false)
 
@@ -94,8 +95,8 @@ class NumUpdateActivity : AppCompatActivity() {
 
         recul()
 
-        var stockswitch: Int = 0
-        var stockswitch2: Int = 0
+        var stockswitch: Int = 0   //最初の処理＝０　2回目以降の処理＝１
+        var stockswitch2: Int = 0  //変更する項目の頭（これ以上戻れない位置）にカーソルが来たら１
 
         EditStock.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(p0: Editable?) {
@@ -106,6 +107,7 @@ class NumUpdateActivity : AppCompatActivity() {
                 updatestock = p0.toString().toInt()
                 if (stockswitch == 0) {
                     updatecook = updaterequired - updatestock
+                    if (updatecook < 0) {updatecook = 0}
                     updatetotal = updatestock + updatecook
                     recul()
                 } else
@@ -234,10 +236,4 @@ class NumUpdateActivity : AppCompatActivity() {
 
          */
     }
-
-
 }
-
-
-
-

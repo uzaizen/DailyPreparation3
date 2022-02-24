@@ -53,7 +53,7 @@ class CustomAdapter(context: Context?, var mDish1List: List<Dish1>) : ArrayAdapt
         total?.text = "%,12d".format(dish1.Total)
         if (dish1.Total > 999) {total?.text = "%,12d".format(dish1.Total)}
         else if (dish1.Total > 99) {total?.text = " "+"%,12d".format(dish1.Total)}
-        else if (dish1.Total > 9) {cook?.text = "  "+"%,12d".format(dish1.Total)}
+        else if (dish1.Total > 9) {total?.text = "  "+"%,12d".format(dish1.Total)}
         else {total?.text = "   "+"%,12d".format(dish1.Total)}
 
         return view!!

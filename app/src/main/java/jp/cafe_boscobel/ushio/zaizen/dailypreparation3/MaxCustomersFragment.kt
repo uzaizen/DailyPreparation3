@@ -39,6 +39,7 @@ class MaxCustomersFragment : Fragment() {
             /*キーボードを消す*/
             val inputManager = activity?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
             inputManager.hideSoftInputFromWindow(view.windowToken, InputMethodManager.HIDE_NOT_ALWAYS)
+            maxcustomers.clearFocus()
         }
         }
 
